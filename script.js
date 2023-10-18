@@ -1,5 +1,4 @@
 // Your Script here.
-
 const lookup = {
   A: "N",
   B: "O",
@@ -32,21 +31,21 @@ const lookup = {
 };
 
 function rot13(encodedStr) {
-	str = str.toUpperCase();
-	let output ="";
-	for(let i=0;i<str.length;i++){
-		if(lookup[str[i]]){
-			output += lookup[str[i]];
-		}else{
-			output+=str[i];
-		}
-	}
-	return output;
+  encodedStr = encodedStr.toUpperCase();
+  let output = "";
+  for (let i = 0; i < encodedStr.length; i++) {
+    if (lookup[encodedStr[i]]) {
+      output += lookup[encodedStr[i]];
+    } else {
+      output += encodedStr[i];
+    }
+  }
+  return output;
 }
 
-// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
-
+// You can test your code by running the above function and printing it to the console by pressing the run button. For example:
 // console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 // Do not change this line
 window.rot13 = rot13;
+
